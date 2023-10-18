@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Galería - C.A.R</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="css/styles.css">
+		
+
+
+	</head>
+	<body>
+
+		
+		<div class="banner">
+			<img src="img/banner_2.jpg" alt="" class="banner__img">
+			<div class="contenedor">
+				<h2 class="banner__titulo">Galería</h2>
+				<p class="banner__txt"> MI TRABAJO</p>
+			</div>
+		</div>
+		<main class="main">
+			<div class="contenedor">
+				<article class="info__columna">
+					<h2 class="info__titulo">MÁS CONTENIDO</h2>
+					<p class="info__txt">Para ir a la página principal <a href="index.html">ENTRA AQUÍ</a>, y si lo deseas te dejo mi <a href="contacto.html">CONTACTO</a></p>
+					
+				</article>
+				<article class="info__columna">
+					<h2 class="info__titulo"> Métodos de contacto</h2>
+					<p class="info__txt"><ul>
+						<li>Correo Electrónico: <a href="mailto:carlotaacearey@gmail.com">carlotaacearey@gmail.com </a>| <a href="mailto:cacea@myuax.com">cacea@myuax.com</a></li>
+						<li>Teléfono:628380487</li>
+						<li>Instagram: <a href="https://www.instagram.com/carlotaacea/?next=%2F">@carlotaacea</a></li>
+					</ul></p>
+				</article>
+
+				
+			</div>
+		</main>
+
+
+
+		<footer class="footer">
+			<div class="social">
+				<a href="https://www.instagram.com/carlotaacea/?next=%2F" class="icon-instagram"></a>
+				<a href="mailto:carlotaacearey@gmail.com" class="icon-correo"></a>
+			</div>
+			<section class="formulario">
+			<form action="contact.php" method="post">
+				<div class="contenedor">
+					<h1>¡Contáctame sin compromiso!</h1>
+					<ul>
+						<li><div class="grid grid-2">
+							<input id ="nombre" type="text" name="nombre" placeholder="Nombre" required="" />
+							<input id="apellido" type="text" name="apellido" placeholder="Apellido" required="" />
+						</div></li>
+						<li><div class="grid">
+							<input id="email" type="email" name="email" placeholder="Correo Electrónico" required="" />
+						</div></li>
+						<li><textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea></li>
+						<li><div class="grid">
+							<input id="submit" type="submit" name="submit" value="Enviar" />
+						</div></li>
+					</ul>
+				</div>
+			</form>
+			</section>
+			<p class="copy">&copy; Carlota Acea Rey, 2023 - Todos los derechos reservados</p>
+			<p class="copy">Web por Carlota.</p>
+		</footer>
+	</body>
+</html>

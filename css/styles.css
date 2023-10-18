@@ -1,0 +1,502 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+  }
+  body{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+  }
+ 
+  h1, h2, h3, h4, h5, h6 {
+  font-family: 'Amatic SC', cursive;
+  letter-spacing: 1.1px;
+
+}
+
+
+
+.header {
+  height: 60px;
+}
+.header .contenedor{
+  display: flex;
+  justify-content: space-between;
+}
+.logo a {
+  text-decoration: none;
+}
+.logo, .icon-menu{
+  margin: 5px;
+  color: #264d00;
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #ffd9b3; /*CAMBIAR A COLORES DE PALETA*/
+  text-align: center;
+  line-height: 45px;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* Menu */
+
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 20px;
+  background: #264d00; /*CAMBIAR COLORES A PALETA*/
+  text-decoration: none;
+  color: #ffd9b3;
+}
+
+.menu__link:hover, .select {
+  font-weight: bold;
+}
+
+.mostrar {
+  left: 0;
+
+}
+
+
+/* Banner */
+
+.banner{
+  margin-top: -60px;
+  position: relative;
+  z-index: -1000;
+  font-size: 350%;
+}
+
+.banner .contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+
+.banner__txt {
+  font-size: 60%;
+  display: none;
+}
+
+.banner__titulo {
+    font-size: 70%;
+  }
+
+
+
+/*Info*/
+
+.info__columna {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  text-align: center;
+  list-style: none;
+}
+
+.info__columna ul, li {
+  list-style: none;
+  display: list-item;
+  margin-left: 1em;
+
+}
+
+.info__columna a {
+  text-decoration: none;
+}
+
+/*Footer*/
+
+.footer{
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+  display: inline-block;
+  color: #333;
+  background: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px;
+  line-height: 40px;
+}
+
+.footer :root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+}
+.footer .formulario {
+  padding: 0;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.footer .formulario a {
+  color: inherit;
+}
+
+.footer .formulario input, select, textarea, button {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.footer .formulario button, label {
+  cursor: pointer;
+}
+
+.footer .formulario select {
+  appearance: none;
+}
+
+.footer .formulario select::-ms-expand {
+  display: none;
+}
+
+.footer .formulario select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+
+.footer .formulario textarea {
+  resize: none;
+}
+
+.footer .formulario ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 600px){
+  .footer .formulario .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .footer .formulario .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer .formulario .grid-3{
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+  }
+}
+
+.footer .formulario select, input, textarea, button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.footer .formulario select:focus, input:focus, textarea:focus, button:focus {
+  background: var(--bgFormElsFocus);
+}
+
+.footer .formulario select:focus, input:focus, textarea:focus {
+  transform: scale(1.02);
+}
+
+.footer .formulario *:required{
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+  background-image: url(../img/ast.svg);
+}
+
+.footer .formulario .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+ 
+.footer .formulario button:enabled:hover,
+.footer .formulario button:focus {
+  background: var(--bgFormElsFocus);
+}
+ 
+.footer .formulario button > * {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+ 
+.footer .formulario button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+ 
+.footer .formulario button:enabled:hover .back,
+.footer .formulario button:focus .back {
+  transform: translate(-50%, -50%);
+}
+ 
+.footer .formulario button:enabled:hover .front,
+.footer .formulario button:focus .front {
+  transform: translateX(110%);
+}
+
+.footer .formulario input[type="checkbox"] {
+  position: absolute;
+  
+}
+
+.footer .formulario input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2rem;
+  transition: background 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+ 
+.footer .formulario input[type="checkbox"]:focus + label {
+  background: var(--bgFormElsFocus);
+}
+ 
+.footer .formulario input[type="checkbox"] + label::before,
+.footer .formulario input[type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+}
+ 
+.footer .formulario input[type="checkbox"] + label::before {
+  left: 0;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--white);
+}
+ 
+.footer .formulario input[type="checkbox"]:checked + label::before {
+  background: var(--red);
+}
+ 
+.footer .formulario input[type="checkbox"]:checked + label::after {
+  left: 7px;
+  top: 7px;
+  width: 6px;
+  height: 14px;
+  border-bottom: 2px solid var(--white);
+  border-right: 2px solid var(--white);
+  transform: rotate(45deg);
+}
+ 
+@media screen and (min-width: 541px) {
+  
+  .footer input[type="checkbox"] + label::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+   
+  .footer input[type="checkbox"]:checked + label::after {
+    top: 3px;
+  }
+
+  
+}
+
+#submit {
+ 
+  cursor:pointer;
+}
+
+/* Responsive */
+
+@media(min-width: 1000px) {
+  .logo {
+    font-size: 40px;
+  }
+
+  .banner__titulo {
+    font-size: 200%;
+  }
+  .banner__txt {
+    display: block;
+  }
+  
+}
+
+/* Botones */
+.btn-abrir-popup {
+  background-image: url(../img/digital.jpg) !important;
+  background-size: cover;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  width: 22vw;
+  height: 17vw;
+  transition: .45s ease all;
+}
+
+.btn-abrir-popup:before {
+  content:'';
+  position: absolute;
+        top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+  transition: .45s ease all;
+}
+.btn-abrir-popup:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.btn-abrir-popup:hover:before {
+  background-color: rgba(0,0,0,0);
+}
+
+
+/* Popup */
+
+.overlay {
+  background: rgba(0,0,0,.75);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.overlay h3 {
+  font-size: 240%;
+}
+
+.overlay.active {
+  visibility: visible;
+}
+
+.popup {
+  background: #f8f8f8;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+  border-radius: 3px;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+
+  transition: .6s ease all;
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+  color: #BBBBBB;
+  transition: .3s ease all;
+  text-decoration: none;
+}
+
+.popup .btn-cerrar-popup:hover {
+  color: #000;
+}
+
+
+
+
+
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("fonts/untitled-font-1.eot");
+  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.woff") format("woff"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\61";
+}
+.icon-menu:before {
+  content: "\62";
+}
+.icon-correo:before {
+  content: "\63";
+}
+.icon-times:before {
+  content: "\64";
+}
